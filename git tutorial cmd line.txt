@@ -1,0 +1,127 @@
+source:-  https://www.youtube.com/watch?v=HVsySz-h9r4&t=1072s
+First Time set up
+--After Installing check version
+   use git --version
+
+-- Next set config values. This is to add name to github check in.
+   -- git config --global user.name "pratik"
+   -- git config --global user.email "pratik.kumarpsc@gmail.com"
+
+ * after setting we can see the config list using 
+   -- git config --list
+
+  --To get help
+    git --help config
+
+Initialize a repository from existing code
+(self - when we have code in local machine and want to upload it to github)
+--Go to folder of existing code and use   - git init
+  git init will initialize the code and git will start tracking. Also , git will
+  add a file with .git extension.
+  use dir to determine the file present.(self :- There is no file with git 
+            extension as shown in video. It work on mac only. 
+    in window it is hidden file.so use  - dir /A)
+ -- To remove tracking with git use rm -rf .git
+    (The idea is to remove file with .git extension)
+
+-- use git status to check the file status
+
+--Add gitignore file
+-- use touch -gitignore to create a file that determine the file that should not be tracked from git
+   (touch does nt work in window)
+
+Add file to staging area
+ staging area is place where the changes can be seen before final check in to repo.
+
+-- git add -A  - to put all file in staging area
+-- git add <filename>  - to put specific file in staging area
+  use git status to check file
+
+-- git reset  - to delete file from staging area
+    git reset <filename>
+
+COMMIT
+-- git commit -m "Local To git Check"
+
+
+
+Working with a remote repository
+-- cloning a remote repo
+     git clone <url> <where to clone>
+     git clone https://github.com/Pratik-kumar/local .
+        . at the end mean clone to path specified in cmd
+
+-- Instead of url we can use local file also
+   -- use git clone ../remote-repo.git .
+      not working for me
+
+Viewing information about remote repository
+  -- git remote -v - information about remote repo 
+
+   -- git branch -a   - tells which branch we are working on 
+
+Pushing changes from local to repo
+  first commit the changes as we do in local
+  -- git diff  - show change made to the code
+  use git status to check
+
+  -- use git add -A   - to add all the change
+  -- use git commit to commit changes
+     git commit -m changed in local machine"
+
+PUSHING CHANGES
+  -- use git pull first to pull all the changes done to code after the repo has been cloned to local
+     git pull origin master
+
+  -- use git push to push the changes to master branch
+     git push origin master
+
+Creating branch
+  -  git branch <branch-name>
+  -  use git checkout <branch-name> to check out the branch and start working on it.
+
+--  then use
+    git push -u origin <branch-name>
+  This will push the changes to branch
+
+Merge a branch
+  -- first check out master
+     git checkout master
+
+  --  use git pull to update the master branch
+      git pull origin master
+
+  -- use git branch -- merged    to check the branches that hae been merged
+
+  -- finally to merge from branch
+     git merge <branch-name>
+
+   -- use git push to push the changes to master branch
+     git push origin master 
+
+To delete the branch after merge
+   -- git branch -d <branch-name>
+   -- git push origin --delete <branch-name>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
