@@ -110,6 +110,15 @@ Adding an existing project to github
 https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
 
 
+**********************************************
+-- Remove directory from git and local
+
+You could checkout 'master' with both directories;
+
+git rm -r one-of-the-directories
+git commit -m "Remove duplicated directory"
+git push origin <your-git-branch> (typically 'master', but not always)
+
 
 
 
